@@ -1,0 +1,45 @@
+.apresentation-section {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url(../img/fundo.png);
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  backdrop-filter: saturate(0);
+  z-index: -1;
+  padding: 0 40px;
+}
+
+.apresentation-section p {
+  font-size: clamp(20px, 15px, 30px);
+  color: white;
+  width: max(85%, 50vw);
+  font-family: 'Poppins';
+  text-align: center;
+}
+.apresentation-section p.restaurant-title {
+  font-size: clamp(5rem, 12vw, 20rem);
+  width: 100vw;
+  font-family: 'Tangerine';
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.apresentation-section img {
+  height: clamp(150px, 300px, 850px);
+}
+.apresentation-section button {
+  width: 175px;
+  height: 47px;
+  background: var(--red);
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+}
