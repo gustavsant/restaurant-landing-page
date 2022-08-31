@@ -1,6 +1,91 @@
 .about-where-section {
-  height: 1000px;
   background-color: white;
   margin-top: 105vh;
   z-index: 1;
+}
+.section-header {
+  height: 130px;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 37px;
+  text-align: center;
+  color: white;
+
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.about-where-section .about.section-header {
+  background: url(https://64.media.tumblr.com/aa998b25957f5a00498817d001ed5685/tumblr_pnaxsuYqgp1xp5ck6o1_1280.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.section-body {
+  padding: 10px 40px;
+
+  font-family: 'Poppins';
+  font-style: regular;
+  font-weight: regular;
+  font-size: 14px;
+  line-height: 32px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #000;
+}
+.section-body .restaurant-title {
+  font-family: 'Tangerine';
+  font-size: 3em;
+}
+.section-body .location {
+  font-size: 14px;
+  font-weight: semi-bold;
+}
+.mapouter {
+  margin: 0 auto;
+}
+.contact > div {
+  background-color: white;
+  text-align: center;
+  height: 100px;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  background-image: url(../img/PRATO02.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 40px;
+  gap: 10px;
+}
+.contact > div {
+  font-size: 18px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.contact div p.pfont {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.contact div p i {
+  font-size: 32px;
+}
+.contact .wpp a {
+  font-size: 28px;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  background-color: #1bd741;
+  height: 40px;
+  width: 120px;
 }
