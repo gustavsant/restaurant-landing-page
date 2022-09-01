@@ -31,8 +31,8 @@
 }
 
 .apresentation-section img {
-  min-height: 250px;
-  height: 30vw;
+  min-height: 150px;
+  height: 50vh;
 }
 .apresentation-section button {
   animation: wobble-hor-bottom 1s infinite;
