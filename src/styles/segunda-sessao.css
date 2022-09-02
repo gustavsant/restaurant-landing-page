@@ -32,7 +32,7 @@
   text-align: center;
 }
 .section-body p.about {
-  width: 50%;
+  width: min(100%, 400px);
 }
 .section-body .restaurant-title {
   font-family: 'Tangerine';
@@ -45,7 +45,7 @@
   font-weight: semi-bold;
 }
 .mapouter {
-  margin: 0 auto;
+  padding: 10px 40px;
 }
 .contact > div {
   background-color: white;
