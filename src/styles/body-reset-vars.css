@@ -18,10 +18,8 @@ body {
 
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  scroll-behavior: smooth;
 }
 body::-webkit-scrollbar {
-  display: none;
-}
-html {
-  scroll-behavior: smooth;
+  visibility: none;
 }
