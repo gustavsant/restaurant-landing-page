@@ -25,11 +25,11 @@
 </head>
 <body>
   <header>
-    <div class="menuButton">
+    <button class="menuButton" aria-expanded="false" aria-controls="menu" aria-haspopup="true" aria-label="Abrir menu">
       <span class="hamburguer"></span>
-    </div>
+    </button>
 
-    <nav class="menu active">
+    <nav class="menu" role="menu">
       <ul>
         <li><a href="#contact">Contato</a></li>
         <li><a href="#about">Localização</a></li>
@@ -55,7 +55,7 @@
       <div class="about section-header">
         <p>
           SOBRE & <br/>
-          ONDE NOS ENCONTRAR <a href="#mapouter">a</a>
+          ONDE NOS ENCONTRAR
         </p>
       </div>
       <div class="contact" id="contact">
@@ -110,6 +110,9 @@
       if(event.type === 'touchstart') event.preventDefault()
       const header = document.querySelector('header')
       header.classList.toggle('active')
+      let isActive = header.classList.contains('active')
+      event.currentTarget.setAttribute('aria-expanded', isActive)
+      event.currentTarget.setAttribute('aria-label', isActive ? 'Fechar menu' : 'Abrir menu')
     }
 
     menuButton.addEventListener('click', toggleHamburguer)

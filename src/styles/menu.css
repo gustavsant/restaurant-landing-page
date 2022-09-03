@@ -20,6 +20,8 @@ header.active {
 }
 header .menuButton {
   display: flex;
+  background: none;
+  border: none;
   cursor: pointer;
   height: 30px;
 }
@@ -27,6 +29,7 @@ header .menuButton {
   width: 30px;
   height: 2px;
   border-top: 4px solid black;
+  transition: 0.3s;
 }
 .hamburguer::after,
 .hamburguer::before {
@@ -34,13 +37,30 @@ header .menuButton {
   margin-top: 5px;
   display: block;
   width: inherit;
+  transition: 0.3s;
 
-  border-top: 4px solid black;
+  border-top: 4px solid;
+  border-top-color: black;
+}
+header.active .menuButton .hamburguer {
+  translate: 0 -8px;
+  border-top-color: transparent;
+}
+header.active .menuButton .hamburguer::before {
+  rotate: -220deg;
+  translate: 0 8px;
+}
+header.active .menuButton .hamburguer::after {
+  rotate: 220deg;
 }
 header .menu {
+  display: none;
   position: absolute;
   top: 30px;
   left: 0;
+}
+header.active .menu {
+  display: block;
 }
 header .menu ul {
   list-style: none;
