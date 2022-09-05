@@ -18,7 +18,8 @@
 
 .section-body {
   padding: 10px 40px;
-
+  width: 100%;
+  height: 100%;
   font-family: 'Poppins';
   font-style: regular;
   font-weight: regular;
@@ -33,12 +34,13 @@
 }
 .section-body p.about {
   width: min(100%, 400px);
+  text-align: start;
+  line-height: 1.6;
 }
 .section-body .restaurant-title {
   font-family: 'Tangerine';
   font-size: 5em;
-  padding: 5%;
-  padding-bottom: 0px;
+  text-align: start;
 }
 .section-body .location {
   font-size: 16px;
@@ -50,20 +52,24 @@
 .contact > div {
   background-color: white;
   text-align: center;
-  height: 100px;
+  height: 90%;
+  width: 33%;
 }
 .contact {
+  padding: 0 40px;
+  width: 100%;
+}
+.contact p.contact-title {
+  font-size: 32px;
+  text-align: center;
+}
+.contact .contacts-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(../img/PRATO02.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  padding: 40px;
-  gap: 10px;
+  flex-direction: column;
+  height: 100%;
+  gap: 40px;
 }
 .contact > div {
   font-size: 18px;
@@ -89,9 +95,17 @@
   height: 40px;
   width: 120px;
 }
+
 @media screen and (min-width: 768px) {
   .contact {
+    width: 100%;
     flex-direction: row;
+  }
+  .second-section-body-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
   }
   .contact div p.pfont {
     font-size: 16px;

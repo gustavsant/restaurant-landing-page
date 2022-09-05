@@ -1,0 +1,28 @@
+.cardapio-section {
+  background: url(../img/fundoMelhor.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+.cardapio-section .section-header {
+  background-color: white;
+}
+.cardapio-section ul {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 12px;
+}
+.cardapio-section ul li {
+  height: 300px;
+  width: 300px;
+  border: 1px solid tomato;
+  object-fit: contain;
+  background-position: center;
+  background-size: cover;
+}
+.cardapio-section ul li img {
+  height: 300px;
+}
