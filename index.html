@@ -4,13 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="src/styles/primeira-sessao.css">
-  <link rel="stylesheet" href="src/styles/segunda-sessao.css">
-  <link rel="stylesheet" href="src/styles/terceira-sessao.css">
-  <link rel="stylesheet" href="src/styles/menu.css">
-  <link rel="stylesheet" href="src/styles/body-reset-vars.css">
+  <!-- ESTILOS -->
+  <link rel="stylesheet" href="src/styles/home.css">
+ 
 
   <!-- FONTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,120 +20,20 @@
   <title>Maria's Restaurante</title>
 </head>
 <body>
-  <header>
-    <button class="menuButton" aria-expanded="false" aria-controls="menu" aria-haspopup="true" aria-label="Abrir menu">
-      <span class="hamburguer"></span>
-    </button>
-
-    <nav class="menu" role="menu">
-      <ul>
-        <li><a href="#contact">Contato</a></li>
-        <li><a href="#about">Localização</a></li>
-        <li><a href="#">Menu</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main> 
-    <section class="apresentation-section">
-
-      <img src="src/img/logo-g.png" alt="logo grande">
-      <p class="restaurant-title">
-        Maria's Restaurante
-      </p>
-      
-      <p>Experimente a melhor
-        comida caseira da região.
-        Visite Já!
-      </p>
-      <button>role para baixo</button>
-    </section>
-    <section class="about-where-section">
-      <div class="about section-header">
-        <p>
-          SOBRE & <br/>
-          ONDE NOS ENCONTRAR
-        </p>
-      </div>
-      <div class="second-section-body-container">
-        <div class="contact" id="contact">
-          <p class="contact-title">Contate-nos</p>
-          <div class="contacts-container">
-            <div class="wpp">
-              <p>Faça seu pedido via WhatsApp: <br/>
-                (84)98182-3877 <br/>
-                <p class="pfont">(ou clique no botão abaixo)</p>
-                <a href="#" onclick='window.open("https://wa.me/c/558481823877");return false;'><i class="bi bi-whatsapp"></i></a>
-              </p>
-            </div>
-            <div class="call">
-              <p>
-                <i class="bi bi-telephone-fill"></i> <br/>
-                Se preferir, ligue para: <br/>
-                (84)99167-5932</p>
-            </div>
-            <div class="email">
-              <p>
-                <i class="bi bi-envelope-fill"></i>
-                <br/>
-                Nosso email: <br/>
-                <p class="pfont">mariasrestaurante@gmail.com</p></p>
-            </div>
-          </div>
-        </div>
-        <div class="section-body" id="about">
-          <p>
-            <p class="restaurant-title">Marias Restaurante</p> <p class="about">Somos um restaurante & marmitaria localizado em frente a orla da praia de Diogo Lopes, oferecendo atualmente, tanto café da manhã quanto almoço e janta. Nos especializamos em comida caseira, de alta qualidade e por um preço que cabe no seu bolso!</p>
-          </p> <br/>
-          <p class="location">
-            <i class="bi bi-geo-alt-fill"></i> Praia de Diogo Lopes, Macau - RN <br/>
-            R. João Gaspar 06
-          </p>
-        </div>
-      </div>
-      <div class="mapouter">
-        <div
-        class="gmap_canvas">
-        <iframe width="100%" height="400px" id="gmap_canvas" src="https://maps.google.com/maps?q=Macau,%20Diogo%20Lopes,%20Marias%20Restaurante&t=&z=19&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-        </div>
-      </div>
-    </section>
-    <section class="cardapio-section">
-      <div class="about section-header">
-        <p>
-          ALGUNS DE NOSSOS PRATOS!
-        </p>
-      </div>
-      <div class="pratos-container">
-        <ul>
-          <li><img src="src/img/PRATO02.png"></li>
-          <li><img src="src/img/PRATO02.png"></li>
-          <li><img src="src/img/PRATO02.png"></li>
-          <li><img src="src/img/PRATO02.png"></li>
-          <li><img src="src/img/PRATO02.png"></li>
-          <li><img src="src/img/PRATO02.png"></li>
-          <li><img src="src/img/PRATO02.png"></li>
-          <li><img src="src/img/PRATO02.png"></li>
-        </ul>
-      </div>
-    </section>
-    <footer></footer>
-  </main>
-  <script>
-    let menuButton = document.querySelector('.menuButton')
-
-
-
-    function toggleHamburguer(event){
-      if(event.type === 'touchstart') event.preventDefault()
-      const header = document.querySelector('header')
-      header.classList.toggle('active')
-      let isActive = header.classList.contains('active')
-      event.currentTarget.setAttribute('aria-expanded', isActive)
-      event.currentTarget.setAttribute('aria-label', isActive ? 'Fechar menu' : 'Abrir menu')
-    }
-
-    menuButton.addEventListener('click', toggleHamburguer)
-    menuButton.addEventListener('touchstart', toggleHamburguer)
-  </script>
+  <section id="home">
+    <header>
+      <img src="src/img/logo-p.png" alt="logo-pequena">
+      <span>menu</span>
+    </header>
+    <img src="src/img/logo-g.png" alt="">
+    <p>
+      Experimente a melhor comida caseira da região. <br/>
+      Visite já!
+    </p>
+    <p class="title">
+      Maria's Restaurante
+    </p>
+    <p>Role para ver mais</p>
+  </section>
 </body>
 </html>
