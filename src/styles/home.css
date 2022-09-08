@@ -11,13 +11,28 @@
   height: 100vh;
   width: 100vw;
 }
-#home header {
-  color: white;
+#home .desc {
+  font-family: 'Cormorant', serif;
   display: flex;
-  justify-content: space-between;
-  width: 100vw;
+  flex-direction: column;
   align-items: center;
 }
-#home header img {
-  height: 100px;
+
+#home img.logo {
+  height: 250px;
+}
+
+#home #descricao {
+  font-size: 18px;
+  color: white;
+  text-align: center;
+}
+#home #descricao #title {
+  font-family: 'Tangerine';
+  font-size: 64px;
+  margin-bottom: 1em;
+}
+#home #descricao .scroll-flag {
+  font-family: 'Poppins';
+  font-size: 13px;
 }

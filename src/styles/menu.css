@@ -1,0 +1,11 @@
+#home header {
+  font-family: 'Cormorant', serif;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  align-items: center;
+}
+#home header img {
+  height: 100px;
+}
