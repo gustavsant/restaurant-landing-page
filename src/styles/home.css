@@ -12,7 +12,8 @@
   width: 100vw;
 }
 #home .desc {
-  font-family: 'Cormorant', serif;
+  padding: 0 30px;
+  font-family: 'Poppins';
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,14 +24,15 @@
 }
 
 #home #descricao {
-  font-size: 18px;
+  font-size: 14px;
+  font-weight: semi-bold;
   color: white;
   text-align: center;
 }
 #home #descricao #title {
   font-family: 'Tangerine';
   font-size: 64px;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 #home #descricao .scroll-flag {
   font-family: 'Poppins';
