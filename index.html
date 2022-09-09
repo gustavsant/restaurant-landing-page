@@ -36,11 +36,18 @@
     <section id="home">
       <header>
         <img src="src/img/logo-p.png" alt="logo-pequena" />
-        <div class="menu">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+        <nav>
+          <button class="menu-mobile">
+            <div class="t1"></div>
+            <div class="t2"></div>
+            <div class="t3"></div>
+          </button>
+          <ul class="menu">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </nav>
       </header>
       <div class="desc">
         <img class="logo" src="src/img/logo-g.png" alt="" />
@@ -114,5 +121,12 @@
         </div>
       </div>
     </section>
+    <script>
+      const menuMobile = document.querySelector('.menu-mobile')
+      menuMobile.addEventListener('click', () => {
+        const nav = document.querySelector('nav')
+        nav.classList.toggle('active')
+      })
+    </script>
   </body>
 </html>

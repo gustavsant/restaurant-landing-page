@@ -1,5 +1,6 @@
 #contact {
-  padding: 0 30px;
+  scroll-padding: 65px 0 0 0;
+  padding: 60px 30px;
   font-family: 'Poppins';
 }
 #contact h2 {

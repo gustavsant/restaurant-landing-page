@@ -17,14 +17,91 @@
 #home header img {
   height: 75px;
 }
-#home header .menu {
+#home header nav .menu {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 7px;
+  gap: 75px;
+  list-style: none;
+  font-family: 'Cormorant';
+  font-weight: normal;
+  font-size: 20px;
 }
-.menu div {
+#home header nav .menu li {
+  cursor: pointer;
+}
+#home header nav .menu li a {
+  display: inline-flex;
+  color: white;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 20px;
+  width: 100%;
+  height: 80px;
+  text-align: center;
+}
+#home header .menu-mobile {
+  background: none;
+  border: none;
+  display: none;
+}
+.menu-mobile div {
   width: 38px;
   height: 3px;
   background-color: #ee1c1c;
+  transition: 0.5s;
+}
+@media (max-width: 600px) {
+  #home header .menu-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 7px;
+  }
+  #home header nav .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ee1c1c;
+    height: 0px;
+    transition: all 0.3s;
+    width: 50vw;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    visibility: hidden;
+    overflow: hidden;
+    gap: 0;
+  }
+  #home header nav.active .menu {
+    height: 53vh;
+    visibility: visible;
+  }
+  #home header nav.active .menu li {
+    font-size: 20px;
+    background-color: none;
+    transition: background-color 0.2s;
+  }
+  #home header nav.active .menu li:hover {
+    background-color: #d41111;
+  }
+  #home header nav.active .menu-mobile div {
+    background-color: white;
+  }
+  #home header nav.active .menu-mobile div.t1 {
+    rotate: 135deg;
+    translate: 0 10px;
+  }
+  #home header nav.active .menu-mobile div.t2 {
+    translate: 150px 0;
+    opacity: 0;
+  }
+  #home header nav.active .menu-mobile div.t3 {
+    rotate: -135deg;
+    translate: 0 -10px;
+  }
+  #home header nav.active .menu-mobile {
+    position: absolute;
+    z-index: 5;
+    top: 20px;
+    right: 30px;
+  }
 }

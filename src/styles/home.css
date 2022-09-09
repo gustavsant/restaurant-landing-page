@@ -3,13 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 #home {
   background: url(../img/fundoMelhor.jpeg);
   background-size: cover;
   background-position: center center;
   height: 100vh;
   width: 100vw;
+  scroll-padding-top: 5rem;
 }
 #home .desc {
   padding: 55px 30px;
