@@ -12,7 +12,7 @@
   width: 100vw;
 }
 #home .desc {
-  padding: 0 30px;
+  padding: 55px 30px;
   font-family: 'Poppins';
   display: flex;
   flex-direction: column;
@@ -37,4 +37,9 @@
 #home #descricao .scroll-flag {
   font-family: 'Poppins';
   font-size: 13px;
+}
+@media screen and (orientation: landscape) {
+  #home img.logo {
+    height: 140px;
+  }
 }

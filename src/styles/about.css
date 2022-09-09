@@ -20,6 +20,7 @@
   height: 126px;
   border-radius: 8px;
   margin: 37px 0;
+  object-fit: cover;
 }
 #about p {
   font-family: 'Poppins';
