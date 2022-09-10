@@ -57,7 +57,9 @@
             Visite já!
           </p>
           <p id="title">Maria's Restaurante</p>
-          <p class="scroll-flag">Role para ver mais</p>
+          <p class="scroll-flag">
+            Role para ver mais <i class="bi bi-chevron-down"></i>
+          </p>
         </div>
       </div>
     </section>
@@ -69,7 +71,7 @@
         de <strong>Diogo Lopes</strong>.
       </p>
 
-      <img src="src/img/praia_dl.jpg" alt="praia de diogo lopes" />
+      <div class="about-img"></div>
 
       <p id="aboutp2">
         Oferecendo atualmente, tanto <strong>café da manhã</strong> quanto
@@ -79,54 +81,77 @@
       </p>
     </section>
     <section id="contact">
-      <h2 style="font-family: 'Cormorant'">Contate-nos</h2>
-
-      <p>
-        <strong><i class="bi bi-geo-alt"></i>ENDEREÇO </strong>
-      </p>
-
-      <p>
-        Praia de Diogo Lopes, Macau - RN <br />
-        R. João Gaspar 06
-      </p>
-      <a href="#"><strong>Obter direções </strong> </a
-      ><i class="bi bi-map"></i> <br />
-
-      <p>
-        <br /><strong
-          ><i class="bi bi-clock"></i> HORARIOS DE FUNCIONAMENTO</strong
-        >
-      </p>
-
-      <p>
-        Café da manhã: 7:00 - 9:30 <br />
-        Almoço: 11:00 - 15:00 <br />
-        janta: 17:40 - 21:00
-      </p>
-      <br />
-      <p>Fechamos no domingo.</p>
-      <br />
+      <div class="adress-hours">
+        <h2 style="font-family: 'Cormorant'">Contate-nos</h2>
+        <p>
+          <strong><i class="bi bi-geo-alt"></i>ENDEREÇO </strong>
+        </p>
+        <p>
+          Praia de Diogo Lopes, Macau - RN <br />
+          R. João Gaspar 06
+        </p>
+        <a href="https://goo.gl/maps/VNdMaodCpAbwrF9H7" target="_blank"
+          ><strong>OBTER DIREÇÕES </strong> </a
+        ><i class="bi bi-map"></i> <br />
+        <p>
+          <br /><strong
+            ><i class="bi bi-clock"></i> HORARIOS DE FUNCIONAMENTO</strong
+          >
+        </p>
+        <p>
+          Café: 7:00 - 9:30 <br />
+          Almoço: 11:00 - 15:00 <br />
+          janta: 17:40 - 21:00
+        </p>
+        <p>Fechamos no domingo.</p>
+        <br />
+      </div>
       <div class="contact">
-        <div>
-          <p>
-            Ligue-nos: <br />
-            (84)99167-5932
-          </p>
-        </div>
-        <div>
+        <button
+          onclick='window.open("https://wa.me/c/558481823877");return false;'
+        >
           <p>
             Nosso WhatsApp: <br />
             (84)98182-3877
           </p>
-        </div>
+        </button>
+        <button>
+          <p>
+            Ligue-nos: <br />
+            (84)99167-5932
+          </p>
+        </button>
       </div>
     </section>
     <script>
+      const scrollFlag = document.querySelector('#descricao > p.scroll-flag')
+      const header = document.querySelector('header')
+
       const menuMobile = document.querySelector('.menu-mobile')
       menuMobile.addEventListener('click', () => {
         const nav = document.querySelector('nav')
         nav.classList.toggle('active')
       })
+
+      window.onscroll = () => {
+        let isInTop
+        isInTop = window.scrollY === 0 ? true : false
+        if (isInTop) {
+          scrollFlag.style.opacity = 1
+          if (window.innerWidth >= 600) {
+            header.style.height = '0px'
+            header.style.overflowY = 'hidden'
+          }
+        } else {
+          scrollFlag.style.opacity = 0
+          header.style.height = '65px'
+          header.style.overflowY = 'visible'
+        }
+      }
+
+      window.onresize = () => {
+        console.log(window.innerWidth)
+      }
     </script>
   </body>
 </html>

@@ -6,6 +6,12 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  scroll-padding-top: 65px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+html::-webkit-scrollbar {
+  display: none;
 }
 #home {
   background: url(../img/fundoMelhor.jpeg);
@@ -39,7 +45,17 @@ html {
   margin-bottom: 0.5em;
 }
 #home #descricao .scroll-flag {
-  font-family: 'Poppins';
+  position: absolute;
+  padding-bottom: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  animation: scroll ease-in-out 1s infinite alternate;
+  font-weight: bold;
+  transition: 0.5s;
+}
+#home #descricao .scroll-flag i {
   font-size: 13px;
 }
 @media screen and (orientation: landscape) and (max-height: 360px) {
@@ -66,17 +82,26 @@ html {
     font-weight: 800;
     padding-bottom: 30px;
   }
-  #home #descricao .scroll-flag {
-    position: absolute;
-    padding-bottom: 30px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto;
-    font-weight: normal;
-  }
+
   #home #descricao #title {
     font-size: 82px;
     line-height: 59px;
+  }
+  #home #descricao .scroll-flag {
+    font-family: 'Poppins';
+    font-size: 15px;
+    color: #ec4444;
+  }
+  #home #descricao .scroll-flag i {
+    font-size: 15px;
+  }
+}
+
+@keyframes scroll {
+  from {
+    translate: 0 0;
+  }
+  to {
+    translate: 0 10px;
   }
 }
