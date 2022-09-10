@@ -1,4 +1,5 @@
 #home header {
+  z-index: 1;
   position: fixed;
   top: 0;
   height: 65px;
@@ -15,7 +16,7 @@
 }
 #home header nav .menu {
   display: flex;
-  gap: 75px;
+  gap: 20px;
   list-style: none;
   font-family: 'Cormorant';
   font-weight: bold;
@@ -33,6 +34,11 @@
   width: 100%;
   height: 50px;
   text-align: center;
+  background-color: none;
+  transition: all 0.25s;
+}
+#home header nav .menu li a:hover {
+  background-color: #d41111;
 }
 #home header .menu-mobile {
   background: none;

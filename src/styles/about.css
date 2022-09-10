@@ -41,3 +41,52 @@
   font-weight: semi-bold;
   color: #1a0000;
 }
+@media (min-width: 909px) {
+  #about h2 {
+    grid-area: title;
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 59px;
+    /* identical to box height, or 65% */
+
+    text-align: start;
+
+    /* vermelhoEscuro */
+
+    color: #3b0000;
+  }
+  #about p {
+    width: 545px;
+    height: 141px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 46px;
+
+    /* vermelhoCorpo */
+
+    color: #1a0000;
+  }
+  #about #aboutp1 {
+    grid-area: texto;
+  }
+  #about #aboutp2 {
+    grid-area: texto2;
+  }
+  #about {
+    padding: 60px 100px 0 100px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      'title title imagem'
+      'texto texto imagem'
+      'texto2 texto2 imagem';
+  }
+  #about img {
+    grid-area: imagem;
+  }
+}
